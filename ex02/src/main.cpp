@@ -67,5 +67,6 @@ int	main(void)
 	--it;
 	while (it != ite)
 		std::cout << *it++ << "\n";
+	std::stack<int>	s(mstack);
 	return 0;
 }
