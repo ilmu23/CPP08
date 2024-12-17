@@ -10,12 +10,14 @@
 #include <iostream>
 #include "MutantStack.hpp"
 
-/* list
-#include <list>
+#ifdef LIST_MAIN
+# include <list>
 
 int	main(void)
 {
 	std::list<int>	lst;
+
+	std::cout << "Using std::list<int>\n";
 
 	lst.push_back(5);
 	lst.push_back(17);
@@ -40,11 +42,12 @@ int	main(void)
 		std::cout << *it++ << "\n";
 	return 0;
 }
-*/
-
+#else
 int	main(void)
 {
 	MutantStack<int>	mstack;
+
+	std::cout << "Using MutantStack<int>\n";
 
 	mstack.push(5);
 	mstack.push(17);
@@ -70,3 +73,4 @@ int	main(void)
 	std::stack<int>	s(mstack);
 	return 0;
 }
+#endif

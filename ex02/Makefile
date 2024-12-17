@@ -1,7 +1,13 @@
 NAME	=	mstack
 
+BUILD	=	normal
+
 CC		=	c++
-CFLAGS	=	-std=c++17 -Wall -Wextra -Werror
+CFLAGS	=	-std=c++17 -Wall -Wextra -Werror $(EXTRAFLAGS.$(BUILD))
+
+EXTRAFLAGS.normal	=	-DMSTACK_MAIN
+EXTRAFLAGS.mstack	=	-DMSTACK_MAIN
+EXTRAFLAGS.list		=	-DLIST_MAIN
 
 SRCDIR	=	src
 OBJDIR	=	obj
