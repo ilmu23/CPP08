@@ -14,7 +14,7 @@
 # include <cstdint>
 # include <exception>
 
-# define i32vec std::vector<int32_t>
+typedef std::vector<int32_t> i32vec;
 
 class Span
 {
